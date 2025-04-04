@@ -1,36 +1,85 @@
 <!doctype html>
-<html lang="nl">
+<html lang="nl" class="">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/index.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
   <title>My Website</title>
 </head>
 
-<nav class="bg-transparent">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-center">
-      <div class="hidden sm:block">
-        <div class="flex space-x-4 ">
-          <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:text-blue-500">Dashboard</a>
-          <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:text-blue-500">Team</a>
-          <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:text-blue-500">Projects</a>
-          <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-black hover:text-blue-500">Calendar</a>
-        </div>
+<body class="bg-gray-100 text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+
+<!-- Navigation Bar -->
+<nav class="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-600 pt-0 sticky top-0 z-50 w-full transition-all border-none">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex justify-center items-center space-x-8 w-full">
+        <a href="#team" class="rounded-md px-3 py-2 text-sm font-medium hover:text-red-600">Team</a>
+        <a href="#projects" class="rounded-md px-3 py-2 text-sm font-medium hover:text-red-600">Projects</a>
+        <a href="#calendar" class="rounded-md px-3 py-2 text-sm font-medium hover:text-red-600">Calendar</a>
       </div>
     </div>
   </div>
 </nav>
 
+<!-- Gradient Background Container -->
+<div class="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-600 pt-0">
+  <!-- Full-Width Header Section -->
+  <header id="hero-section" class="w-full max-w-7xl mx-auto text-white py-24 min-h-screen flex flex-col items-center justify-center text-center">
+    <h1 class="text-6xl font-extrabold tracking-wide mb-4">Hello, I'm Brett</h1>
+    <p class="text-xl font-medium opacity-80">Welcome to my personal website. Let's explore my projects and journey.</p>
+  </header>
 
-<body>
-<h1 class="text-3xl font-bold underline flex justify-center items-center h-screen">
-  Hello world!
-</h1>
+  <!-- Team Section -->
+  <section id="team" class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-4xl font-bold text-white mb-6 text-center">Meet the Team</h2>
+    <p class="text-lg text-white opacity-80 text-center">
+      Here's some info about the amazing team behind the scenes.
+    </p>
+  </section>
 
-<img src="assets/avatar.jpg" alt="My Avatar" class="w-32 h-32 rounded-full mx-auto mt-4">
+  <!-- Projects Section -->
+  <section id="projects" class="flex flex-col md:flex-row items-center justify-center max-w-7xl mx-auto px-6 py-12">
+    <!-- Left Section -->
+    <div class="md:w-7/12 text-center md:text-left">
+      <h2 class="text-4xl font-bold text-white mb-4">More about me</h2>
+      <p class="text-lg text-white opacity-80">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+      </p>
+    </div>
 
+    <!-- Right Section -->
+    <div class="md:w-5/12 mt-6 md:mt-0 text-center md:text-left">
+      <h3 class="text-2xl font-semibold text-white mb-4">Additional Info</h3>
+      <p class="text-lg text-white opacity-80">
+        Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit.
+      </p>
+    </div>
+  </section>
 
+  <!-- Calendar Section -->
+  <section id="calendar" class="max-w-7xl mx-auto px-6 py-12 text-white text-center">
+    <h2 class="text-4xl font-bold mb-6">Upcoming Events</h2>
+    <p class="text-lg opacity-80">
+      Stay tuned for future updates and events. We'll be adding more info soon!
+    </p>
+  </section>
+</div>
+
+<!-- Regular content outside gradient -->
+<div class="bg-gray-100 dark:bg-gray-900">
+  <!-- Avatar Section -->
+  <div class="flex justify-center mt-8 pb-8">
+    <img src="assets/avatar.jpg" alt="My Avatar" class="w-32 h-32 rounded-full shadow-lg">
+  </div>
+</div>
 
 </body>
 </html>
